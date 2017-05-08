@@ -1,0 +1,9 @@
+body{
+    background-color: salmon;
+    background-image: url("../assets/small.jpg");
+}
+.test{
+    font-size: 200px;
+    text-decoration: underline;
+    color:darkslategrey;
+}

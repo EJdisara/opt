@@ -2,12 +2,19 @@ var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const VENDOR_LIBS = [
+    'jquery'
+];
 
 module.exports = {
-    entry:  './src',
+    entry: {
+        bundle: './src/index.js',
+        vendor: VENDOR_LIBS
+    },
+
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
+        filename: '[name].js',
         publicPath: 'build/'
     },
     module: {
@@ -35,6 +42,12 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jquery: "jquery",
+            "window.jQuery": "jquery",
+            jQuery:"jquery"
         })
     ]
 };

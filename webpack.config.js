@@ -48,6 +48,9 @@ module.exports = {
             jquery: "jquery",
             "window.jQuery": "jquery",
             jQuery:"jquery"
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor', 'manifest']
         })
     ]
 };

@@ -3,11 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--font icon-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<p class="test">Hello World!</p>
-<h1 class="text-center">Bootstrap Work too.</h1>
-<input type="button" class="btn btn-primary" value="Click">
+  <div class="tab">
+    <div class="tab-img">
+    <img src="assets\icon-cfg-01.png" class="img-responsive img-brand"  />
+    </div>
+    <button class="accordion">APO Hierachy <span class="fa fa-angle-down pull-right"></span></span></button>
+    <ul class="panel">
+        <li><a href="#">APO Divition</a></li>
+        <li><a href="#">APO Group</a></li>
+        <li><a href="#">APO Department</a></li>
+        <li><a href="#">APO Class</a></li>
+        <li><a href="#">APO Subclass</a></li>
+    </ul>
+    <button class="accordion">Product Management <span class="fa fa-angle-down pull-right"></span></button>
+    <ul class="panel">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Attribute Value</a></li>
+        <li><a href="#">Attribute Type</a></li>
+    </ul>
+    <button class="accordion">Store Management <span class="fa fa-angle-down pull-right"></span></button>
+    <ul class="panel">
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Store GRP Attribute</a></li>
+        <li><a href="#">Store Attribute Type</a></li>
+        <li><a href="#">Store Attribute</a></li>
+        <li><a href="#">Set Store Attribute</a></li>
+    </ul>
+    <button class="accordion">Market Data Management <span class="fa fa-angle-down pull-right"></span></button>
+    <ul class="panel">
+        <li><a href="#">Market Data</a></li>
+        <li><a href="#">Market Category</a></li>
+        <li><a href="#">Market Subcategory</a></li>
+    </ul>
+  </div>
+
+  <div class="tabcontent">
+  <div class="header">
+    <div class="dropdown pull-right">
+      <button class="btn btn-user dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+      <span class="fa fa-angle-down"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="col-sm-2">
+      <h2>Product</h2>
+    </div>
+    <div class="col-sm-7">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="email">APo Class</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Product</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <button type="button" class="btn btn-gray"><i class="fa fa-search"></i> Search</button>
+      </form>
+    </div>
+    <div class="col-sm-3 block-btn">
+      <button type="button" class="btn btn-danger"><i class="fa fa-search"></i> Import</button>
+      <button type="button" class="btn btn-danger"><i class="fa fa-external-link"></i> Export</button>
+      <button type="button" class="btn btn-danger"><i class="fa fa-plus-circle"></i> Add</button>
+    </div>
+    <div class="col-sm-12">
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
 </body>
 <script src="build/bundle.js"></script>
+
 </html>

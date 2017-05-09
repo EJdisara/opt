@@ -7,14 +7,11 @@ const VENDOR_LIBS = [
 ];
 
 module.exports = {
-    entry: {
-        bundle: './src/index.js',
-        vendor: VENDOR_LIBS
-    },
+    entry:'./src/index.js',
 
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '[name].js',
+        filename: 'bundle.js',
         publicPath: 'build/'
     },
     module: {
@@ -42,15 +39,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html'
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jquery: "jquery",
-            "window.jQuery": "jquery",
-            jQuery:"jquery"
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor', 'manifest']
         })
     ]
 };
